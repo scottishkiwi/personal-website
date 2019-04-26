@@ -1,0 +1,119 @@
+.about-me-internal, .experience-internal, .contact-internal{
+
+    .container{
+        max-width: 1135px; 
+        margin: 0 auto; 
+        padding: 0 15px; 
+        margin-bottom: 30px;
+        h1{
+            display: inline-block;
+            font-family: 'Fredoka One';
+            font-size: 40px; 
+            font-weight: 300;
+        }
+
+        p{
+            font-family: Hind;
+            font-size: 18px;
+        }
+        iframe {
+            display: flex;
+            margin: 30 auto;
+            border: 8px solid #1A2930;
+            border-radius: 10px;
+            padding: 0px;
+        }
+    }
+}
+
+.experience-internal{
+
+    ul{
+        padding: 0; 
+        list-style-type: none;
+        display: grid;
+        grid-template-columns: 25% 25% 25% 25%;
+        li{
+            display:flex;
+            flex-direction: column;
+            align-items: center;
+            cursor: pointer;
+            background-color: #1A2930;
+            border-radius: 5px; 
+            color: white;
+            padding: 10px 20px; 
+            margin: 10px;
+            text-align: center;
+            span{
+                margin: 10px auto;
+            }
+            .experience-skill-container{
+                display:none;
+            }
+
+            
+
+          
+        }
+
+        &:not(.other-skills-list) li{
+            &:nth-child(8n+2){
+                background-color: #42647F;
+            }
+            &:nth-child(8n+4){
+                background-color: #42647F;
+            }
+            &:nth-child(8n+5){
+                background-color: #42647F;
+            }
+            &:nth-child(8n+7){
+                background-color: #42647F;
+            }
+        }
+
+        &.other-skills-list li{
+            &:nth-child(2n-1 ){
+                background-color: #42647F;
+            }
+        }
+    }
+
+
+}
+
+
+.contact-internal{
+
+    .email-container{
+        display: flex;
+        flex-direction: row;
+        margin: 65px auto;
+        width: 253px;
+
+        span{
+            padding: 15px 25px;
+            background-color: #42647F;
+            color: white;
+            border-top-left-radius: 5px; 
+            border-bottom-left-radius: 5px; 
+        }
+        button{
+          
+           
+            background-color:lightgrey;
+            border-top-right-radius: 5px; 
+            border-bottom-right-radius: 5px; 
+        }
+     
+    }
+    a{
+        display: flex;
+        margin: 50px auto;
+        width: 45px;
+        
+        i{
+            color: #0077B5;
+            font-size: 50px; 
+        }
+    }
+}

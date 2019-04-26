@@ -1,0 +1,181 @@
+body {
+  background-color: #C5C1C0;
+  margin: 0;
+  font-family: 'Roboto';
+  position: relative;
+  padding-bottom: 50px; }
+  body header {
+    background-color: #1A2930;
+    height: 120px;
+    position: fixed;
+    top: 0;
+    transition: top 0.2s ease-in-out;
+    width: 100%;
+    border-bottom: 8px solid #0A1612; }
+    body header .header-container {
+      max-width: 1135px;
+      margin: 0 auto;
+      padding: 0 15px;
+      display: flex;
+      justify-content: flex-end;
+      height: calc(100% - 8px); }
+      body header .header-container .logo-container {
+        flex-grow: 1;
+        display: flex; }
+      body header .header-container h1 {
+        font-family: Ranchers;
+        font-size: 60px;
+        color: #CCCBC6;
+        margin: auto 0;
+        margin-top: 25px; }
+      body header .header-container a {
+        height: 100%;
+        display: flex; }
+        body header .header-container a img {
+          display: flex;
+          margin: auto 0;
+          padding-top: 15px; }
+      body header .header-container .nav-container ul {
+        list-style-type: none;
+        display: flex;
+        margin: 0;
+        margin-right: 40px; }
+        body header .header-container .nav-container ul li {
+          margin-left: 60px; }
+          body header .header-container .nav-container ul li a {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            font-family: 'Roboto';
+            text-decoration: none;
+            color: #CCCBC6;
+            padding-bottom: 20px;
+            font-weight: bold; }
+            body header .header-container .nav-container ul li a.selected {
+              color: #F7CE3E; }
+              body header .header-container .nav-container ul li a.selected i {
+                color: #F7CE3E; }
+            body header .header-container .nav-container ul li a i {
+              padding: 35px 0 10px;
+              font-size: 35px;
+              color: #CCCBC6;
+              -webkit-transition: transform 0.5s ease-in-out;
+              -moz-transition: transform 0.5s ease-in-out;
+              -o-transition: transform 0.5s ease-in-out;
+              transition: transform 0.5s ease-in-out;
+              -webkit-transform-style: preserve-3d;
+              transform-style: preserve-3d; }
+            body header .header-container .nav-container ul li a:hover {
+              color: #F7CE3E; }
+              body header .header-container .nav-container ul li a:hover i {
+                color: #F7CE3E;
+                -moz-transform: rotate3d(0, 1, 0, 180deg);
+                -webkit-transform: rotate3d(0, 1, 0, 180deg);
+                -ms-transform: rotate3d(0, 1, 0, 180deg);
+                transform: rotate3d(0, 1, 0, 180deg); }
+  body .nav-up {
+    top: -148px; }
+  body main {
+    margin-top: 128px; }
+    body main .introduction {
+      height: 100vh;
+      background-image: url("../images/wellington-panorama.jpg");
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: auto 100vh; }
+      body main .introduction .title-container {
+        max-width: 1135px;
+        margin: 0 auto;
+        padding: 0 15px; }
+      body main .introduction h2 {
+        font-family: 'Fredoka One';
+        display: inline-block;
+        margin: 130px 0 150px;
+        width: 100%;
+        font-size: 40px;
+        font-weight: 300; }
+    body main .experience, body main .portfolio, body main .about-me {
+      background-image: url("https://www.transparenttextures.com/patterns/45-degree-fabric-light.png"); }
+      body main .experience-container, body main .portfolio-container, body main .about-me-container {
+        max-width: 1135px;
+        margin: 0 auto;
+        padding: 30px 15px 50px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end; }
+        body main .experience-container p, body main .portfolio-container p, body main .about-me-container p {
+          font-family: Hind;
+          font-size: 22px;
+          width: 80%;
+          align-self: flex-start;
+          margin-bottom: 50px;
+          font-weight: 700; }
+        body main .experience-container a, body main .portfolio-container a, body main .about-me-container a {
+          text-decoration: none;
+          border: 1px solid darkslategrey;
+          border-radius: 8px;
+          display: flex;
+          justify-content: space-between;
+          margin: auto 0;
+          height: 40px;
+          width: 200px;
+          color: black;
+          font-family: Hind;
+          font-weight: 500; }
+          body main .experience-container a span, body main .portfolio-container a span, body main .about-me-container a span {
+            margin: auto 20px; }
+          body main .experience-container a i, body main .portfolio-container a i, body main .about-me-container a i {
+            margin: auto 10px; }
+    body main .experience {
+      background-color: #A9A9A9;
+      color: black; }
+      body main .experience a {
+        color: black;
+        border-color: black; }
+        body main .experience a:hover {
+          color: white;
+          background-color: #1A2930;
+          border-color: #1A2930; }
+    body main .portfolio {
+      background-image: url("https://www.transparenttextures.com/patterns/45-degree-fabric-dark.png");
+      background-color: #42647F;
+      color: lightgrey; }
+      body main .portfolio a {
+        border-color: lightgrey;
+        color: lightgrey; }
+        body main .portfolio a:hover {
+          color: white;
+          background-color: #1A2930;
+          border-color: #1A2930; }
+    body main .about-me {
+      background-color: #909090;
+      color: #121e24; }
+      body main .about-me a {
+        border-color: #121e24;
+        color: #121e24; }
+        body main .about-me a:hover {
+          color: white;
+          background-color: #1A2930;
+          border-color: #1A2930; }
+  body footer {
+    background-color: #1b2124;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 50px; }
+    body footer .footer-container {
+      max-width: 1135px;
+      margin: 0 auto;
+      padding: 0 15px;
+      display: flex;
+      justify-content: space-between; }
+      body footer .footer-container h2 {
+        color: #CCCBC6;
+        display: inline-block;
+        font-family: 'Ranchers', cursive;
+        margin: 10px 0; }
+      body footer .footer-container a {
+        margin: auto 0; }
+        body footer .footer-container a i {
+          color: #0077B5;
+          font-size: 30px; }
