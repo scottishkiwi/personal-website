@@ -49,6 +49,8 @@
       margin: 10px auto; }
     .experience-internal ul li .experience-skill-container {
       display: none; }
+
+@media only screen and (min-width: 1024px) {
   .experience-internal ul:not(.other-skills-list) li:nth-child(8n+2) {
     background-color: #42647F; }
   .experience-internal ul:not(.other-skills-list) li:nth-child(8n+4) {
@@ -58,7 +60,7 @@
   .experience-internal ul:not(.other-skills-list) li:nth-child(8n+7) {
     background-color: #42647F; }
   .experience-internal ul.other-skills-list li:nth-child(2n-1) {
-    background-color: #42647F; }
+    background-color: #42647F; } }
 
 .portfolio-internal .professional-work-container {
   margin-bottom: 30px; }
@@ -222,3 +224,38 @@
   .contact-internal a i {
     color: #0077B5;
     font-size: 50px; }
+
+@media only screen and (max-width: 1024px) {
+  .experience-internal ul {
+    grid-template-columns: 1fr 1fr 1fr; }
+    .experience-internal ul li:nth-child(2n) {
+      background-color: #42647F; }
+  .portfolio-internal ul .dropdown-container, .portfolio-internal ul .dropdown-app-container {
+    width: auto; }
+  .portfolio-internal ul img {
+    width: 95%; } }
+
+@media only screen and (max-width: 700px) {
+  .about-me-internal .container iframe {
+    width: calc(100% - 20px); } }
+
+@media only screen and (max-width: 600px) {
+  .experience-internal h1 {
+    margin-bottom: 0; }
+  .experience-internal ul {
+    grid-template-columns: 1fr 1fr; }
+    .experience-internal ul li {
+      background-color: #1A2930 !important; }
+      .experience-internal ul li:nth-child(4n), .experience-internal ul li:nth-child(4n+1) {
+        background-color: #42647F !important; }
+  .about-me-internal .container .text-image-container {
+    flex-direction: column; }
+    .about-me-internal .container .text-image-container p {
+      order: 2; }
+    .about-me-internal .container .text-image-container img {
+      order: 1;
+      margin: auto; }
+  .about-me-internal .container iframe {
+    width: calc(100% - 20px);
+    margin: 0;
+    height: 24%; } }

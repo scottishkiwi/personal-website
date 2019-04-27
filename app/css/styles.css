@@ -35,6 +35,8 @@ body {
           display: flex;
           margin: auto 0;
           padding-top: 15px; }
+      body header .header-container i.fa-bars {
+        display: none; }
       body header .header-container .nav-container ul {
         list-style-type: none;
         display: flex;
@@ -179,3 +181,50 @@ body {
         body footer .footer-container a i {
           color: #0077B5;
           font-size: 30px; }
+
+@media only screen and (max-width: 1024px) {
+  body header {
+    height: 90px;
+    position: static; }
+    body header .header-container i.fa-bars {
+      cursor: pointer;
+      display: block;
+      color: #CCCBC6;
+      padding: 30px 25px;
+      font-size: 30px; }
+    body header .header-container a img {
+      padding-top: 30px;
+      width: 150px; }
+    body header .header-container .nav-container nav {
+      display: none;
+      position: absolute;
+      left: 0;
+      padding-top: 10px;
+      width: 100%;
+      background-color: #1b2124; }
+      body header .header-container .nav-container nav.active {
+        display: block; }
+      body header .header-container .nav-container nav ul {
+        flex-direction: column;
+        padding-left: 20px; }
+        body header .header-container .nav-container nav ul li {
+          margin-left: 0; }
+          body header .header-container .nav-container nav ul li a {
+            align-items: flex-start;
+            font-size: 25px; }
+            body header .header-container .nav-container nav ul li a i {
+              display: none; }
+  body main {
+    margin-top: 0px; } }
+
+@media only screen and (max-width: 600px) {
+  body main .introduction {
+    height: 550px; }
+    body main .introduction h2 {
+      margin-top: 50px;
+      font-size: 30px; }
+  body main .experience-container, body main .portfolio-container, body main .about-me-container {
+    align-items: center; }
+    body main .experience-container p, body main .portfolio-container p, body main .about-me-container p {
+      width: 100%;
+      font-size: 20px; } }

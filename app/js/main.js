@@ -14,7 +14,23 @@ var init = function(){
         portfolioAppSetup();
         portfolioLayoutSetup();
     }
+
+    mobileMenuSetup();
     
+}
+
+function mobileMenuSetup(){
+
+    $('i.fa-bars').on('click', function(){
+        var nav = $(this).siblings(nav);
+
+        if (nav.hasClass('active')){
+            nav.removeClass('active');
+        }else{
+            nav.addClass('active');
+        }
+    });
+
 }
 
 function portfolioLayoutSetup(){
@@ -24,7 +40,6 @@ function portfolioLayoutSetup(){
         var iconDown = $(this).find('i.fa-chevron-down');
         var iconUp = $(this).find('i.fa-chevron-up');
 
-        console.log(portfolioList);
 
         if (portfolioList.hasClass('active')){
             portfolioList.removeClass('active');
@@ -125,6 +140,8 @@ function typeWriter() {
 }
 
 
+
+
 // Hide Header on on scroll down
 var didScroll;
 var lastScrollTop = 0;
@@ -134,13 +151,23 @@ var navbarHeight = $('header').outerHeight();
 $(window).scroll(function(event){
     didScroll = true;
 });
+setIntervalCall();
 
-setInterval(function() {
-    if (didScroll) {
-        hasScrolled();
-        didScroll = false;
+$(window).resize(function(){
+    if(window.width >1024){
+        setIntervalCall();
     }
-}, 250);
+})
+
+function setIntervalCall(){
+    setInterval(function() {
+        if (didScroll) {
+            hasScrolled();
+            didScroll = false;
+        }
+    }, 250);
+}
+
 
 function hasScrolled() {
     var st = $(this).scrollTop();

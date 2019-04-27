@@ -72,29 +72,38 @@
           
         }
 
-        &:not(.other-skills-list) li{
-            &:nth-child(8n+2){
-                background-color: #42647F;
-            }
-            &:nth-child(8n+4){
-                background-color: #42647F;
-            }
-            &:nth-child(8n+5){
-                background-color: #42647F;
-            }
-            &:nth-child(8n+7){
-                background-color: #42647F;
-            }
-        }
-
-        &.other-skills-list li{
-            &:nth-child(2n-1 ){
-                background-color: #42647F;
-            }
-        }
+       
     }
 
 
+}
+
+@media only screen and (min-width: 1024px) {
+    .experience-internal{
+
+        ul{
+            &:not(.other-skills-list) li{
+                &:nth-child(8n+2){
+                    background-color: #42647F;
+                }
+                &:nth-child(8n+4){
+                    background-color: #42647F;
+                }
+                &:nth-child(8n+5){
+                    background-color: #42647F;
+                }
+                &:nth-child(8n+7){
+                    background-color: #42647F;
+                }
+            }
+    
+            &.other-skills-list li{
+                &:nth-child(2n-1 ){
+                    background-color: #42647F;
+                }
+            }
+        }
+    }
 }
 
 .portfolio-internal{
@@ -344,4 +353,95 @@
             font-size: 50px; 
         }
     }
+}
+
+
+@media only screen and (max-width: 1024px) {
+
+    .experience-internal ul{
+        grid-template-columns: 1fr 1fr 1fr;
+
+        li{
+
+            &:nth-child(2n){
+                background-color: #42647F;
+            }
+           
+        }
+
+    }
+
+    .portfolio-internal ul {
+        .dropdown-container, .dropdown-app-container{
+            width: auto; 
+            
+        }
+        img{
+            width: 95%;
+        }
+
+    }
+
+    
+
+
+}
+
+@media only screen and (max-width: 700px) {
+    .about-me-internal{
+        .container{
+            iframe{
+                width: calc(100% - 20px);
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 600px) {
+
+    .experience-internal {
+        h1{
+            margin-bottom: 0; 
+        }
+        ul{
+            grid-template-columns: 1fr 1fr;
+
+            li{
+                
+                background-color: #1A2930 !important;
+
+                &:nth-child(4n), &:nth-child(4n+1){
+                    background-color: #42647F !important;
+                }
+            
+            }
+        }
+    }
+
+    .about-me-internal{
+        .container{
+            
+            .text-image-container{
+                flex-direction: column; 
+                p{
+                    order: 2
+
+                }
+                img{
+                    order: 1;
+                    margin: auto; 
+                }
+            }
+
+            iframe{
+                width: calc(100% - 20px);
+                margin: 0;
+                height: 24%;
+            }
+        }
+
+    }
+
+   
+
 }
