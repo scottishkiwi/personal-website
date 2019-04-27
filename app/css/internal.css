@@ -12,6 +12,7 @@
     display: flex;
     flex-direction: row; }
     .about-me-internal .container .text-image-container img, .experience-internal .container .text-image-container img, .contact-internal .container .text-image-container img, .portfolio-internal .container .text-image-container img {
+      display: block;
       width: 200px;
       border: 8px solid #1A2930;
       height: 200px;
@@ -200,7 +201,7 @@
 .contact-internal .email-container {
   display: flex;
   flex-direction: row;
-  margin: 65px auto;
+  margin: 50px auto;
   width: 253px; }
   .contact-internal .email-container span {
     padding: 15px 25px;
@@ -215,7 +216,7 @@
 
 .contact-internal a {
   display: flex;
-  margin: 50px auto;
+  margin: 40px auto;
   width: 45px; }
   .contact-internal a i {
     color: #0077B5;
