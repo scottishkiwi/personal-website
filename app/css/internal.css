@@ -14,6 +14,7 @@
     .about-me-internal .container .text-image-container img, .experience-internal .container .text-image-container img, .contact-internal .container .text-image-container img, .portfolio-internal .container .text-image-container img {
       display: block;
       width: 200px;
+      min-width: 200px;
       border: 8px solid #1A2930;
       height: 200px;
       border-radius: 115px;
