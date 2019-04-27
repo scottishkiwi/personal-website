@@ -1,4 +1,4 @@
-.about-me-internal, .experience-internal, .contact-internal{
+.about-me-internal, .experience-internal, .contact-internal, .portfolio-internal{
 
     .container{
         max-width: 1135px; 
@@ -10,6 +10,19 @@
             font-family: 'Fredoka One';
             font-size: 40px; 
             font-weight: 300;
+        }
+
+        .text-image-container{
+            display:flex;
+            flex-direction:row; 
+            img{
+                width: 200px;
+                border: 8px solid #1A2930;
+                height: 200px;
+                border-radius: 115px;
+                object-fit: cover;
+                margin-left: 30px; 
+            }
         }
 
         p{
@@ -37,7 +50,6 @@
             display:flex;
             flex-direction: column;
             align-items: center;
-            cursor: pointer;
             background-color: #1A2930;
             border-radius: 5px; 
             color: white;
@@ -79,6 +91,218 @@
     }
 
 
+}
+
+.portfolio-internal{
+
+    .professional-work-container{
+        margin-bottom: 30px; 
+    }
+
+    .title-container{
+        cursor: pointer;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        background-color: #1A2930;
+        color: white;
+        i{
+            margin: auto;
+            font-size: 25px;
+            padding: 20px 25px;
+            display: none;
+
+            &.active{
+                display: block;
+            }
+        }
+        
+    }
+
+    h2{
+        padding: 20px;
+        font-size: 20px;
+        flex-grow: 1;
+        margin: 0;
+    }
+
+    ul{
+        padding:0 20px;
+        margin-top: 30px;
+        list-style-type: none;
+        display: none;
+
+        &.active{
+            display: block;
+        }
+
+        li{
+            margin-bottom: 30px;
+            border-bottom: 1px solid darkslategray;
+            &:last-child{
+                border:none;
+            }
+            
+            .date-info{
+                font-size: 15px;
+            }
+
+            p{
+                a{
+                    font-weight:bold;
+                    text-decoration: none;
+                    color:#1A2930;
+                    &:hover{
+                        text-decoration: underline;
+                    }
+                }
+            }
+        }
+        
+        .image-container{
+            margin: 20px auto;
+        }
+
+        .app-container{
+            display: none;
+
+            &.active{
+                display: flex;
+            }
+
+            &#snake{
+                width: 400px; 
+                height: 400px; 
+                background-color: grey; 
+                
+                margin: 20px auto;
+
+                canvas{
+                    display: none;
+                }
+                canvas.active{
+                    display:block;
+                }
+               
+                button{
+                    display: none;
+                    margin: auto;
+                    color:black;
+                    background-color: white;
+                    border-radius: 5px; 
+                    width: 100px; 
+                    height: 40px; 
+                }
+                button.active{
+                    display:block;
+                }
+            }
+
+            &#calculator-app{
+                .calc-btn {
+                    background-color: silver;
+                    color: black;
+                    width: 25px;
+                    height: 45px;
+                    border: 1px solid grey;
+                    text-align: center; 
+                    cursor: pointer;
+                    font-size: 32px;
+                    font-weight: 100;
+                    padding-top: 3px; 
+                }
+                
+                .calc-btn:hover {
+                    background-color: orange; 
+                }
+                
+                .row {
+                    display: flex;
+                    table-layout: fixed;
+                    width: 300px; 
+                }
+                
+                .column {
+                    width: 300px; 
+                }
+                
+                .calc-btn.column.longer{
+                    width: 154px; 
+                }
+                
+                .calc-btn.column:not(.longer){
+                    width: 75px; 
+                    justify-content: space-around; 
+                }
+                
+                #calc-display-val {
+                    height: 80px;
+                    color: white;
+                    text-align: right;
+                    border-left: 1px solid grey;
+                    border-top: 1px solid grey;
+                    border-right: 1px solid grey;
+                    font-size: 48px;
+                    background-color: #383838; 
+                    overflow: hidden;
+                    white-space: nowrap;
+                    padding: 12px;
+                    border-radius: 7px 7px 0 0; 
+                }
+                
+                .calc-btn-operator {
+                    background-color: orange;
+                    color: white; 
+                }
+                
+                
+                #calc-equals{
+                    border-radius: 0 0 7px 0; 
+                }
+                #calc-zero{
+                    border-radius: 0 0 0 7px; 
+                }
+                
+                #calc-parent{
+                    /*width of calculator*/
+                    width: 300px; 
+                    margin: 0 auto;
+                    padding: 20px;
+                }
+            }
+        }
+        
+
+        .dropdown-container, .dropdown-app-container{
+            display: flex;
+            justify-content: space-between;
+            width: 81%;
+            margin: 0 auto;
+            background-color: #42647F;
+            padding: 20px;
+            color: white;
+            cursor:pointer;
+
+            i{
+                display: none;
+
+                &.active{
+                    display: block;
+                }
+            }
+        }
+
+        img{
+            width: 83%;
+            margin: 0 auto;
+            display: none;
+            padding: 10px;
+
+            &.active{
+                display:block;
+            }
+        }
+    }
 }
 
 

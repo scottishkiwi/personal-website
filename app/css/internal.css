@@ -1,17 +1,27 @@
-.about-me-internal .container, .experience-internal .container, .contact-internal .container {
+.about-me-internal .container, .experience-internal .container, .contact-internal .container, .portfolio-internal .container {
   max-width: 1135px;
   margin: 0 auto;
   padding: 0 15px;
   margin-bottom: 30px; }
-  .about-me-internal .container h1, .experience-internal .container h1, .contact-internal .container h1 {
+  .about-me-internal .container h1, .experience-internal .container h1, .contact-internal .container h1, .portfolio-internal .container h1 {
     display: inline-block;
     font-family: 'Fredoka One';
     font-size: 40px;
     font-weight: 300; }
-  .about-me-internal .container p, .experience-internal .container p, .contact-internal .container p {
+  .about-me-internal .container .text-image-container, .experience-internal .container .text-image-container, .contact-internal .container .text-image-container, .portfolio-internal .container .text-image-container {
+    display: flex;
+    flex-direction: row; }
+    .about-me-internal .container .text-image-container img, .experience-internal .container .text-image-container img, .contact-internal .container .text-image-container img, .portfolio-internal .container .text-image-container img {
+      width: 200px;
+      border: 8px solid #1A2930;
+      height: 200px;
+      border-radius: 115px;
+      object-fit: cover;
+      margin-left: 30px; }
+  .about-me-internal .container p, .experience-internal .container p, .contact-internal .container p, .portfolio-internal .container p {
     font-family: Hind;
     font-size: 18px; }
-  .about-me-internal .container iframe, .experience-internal .container iframe, .contact-internal .container iframe {
+  .about-me-internal .container iframe, .experience-internal .container iframe, .contact-internal .container iframe, .portfolio-internal .container iframe {
     display: flex;
     margin: 30 auto;
     border: 8px solid #1A2930;
@@ -27,7 +37,6 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    cursor: pointer;
     background-color: #1A2930;
     border-radius: 5px;
     color: white;
@@ -48,6 +57,145 @@
     background-color: #42647F; }
   .experience-internal ul.other-skills-list li:nth-child(2n-1) {
     background-color: #42647F; }
+
+.portfolio-internal .professional-work-container {
+  margin-bottom: 30px; }
+
+.portfolio-internal .title-container {
+  cursor: pointer;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  background-color: #1A2930;
+  color: white; }
+  .portfolio-internal .title-container i {
+    margin: auto;
+    font-size: 25px;
+    padding: 20px 25px;
+    display: none; }
+    .portfolio-internal .title-container i.active {
+      display: block; }
+
+.portfolio-internal h2 {
+  padding: 20px;
+  font-size: 20px;
+  flex-grow: 1;
+  margin: 0; }
+
+.portfolio-internal ul {
+  padding: 0 20px;
+  margin-top: 30px;
+  list-style-type: none;
+  display: none; }
+  .portfolio-internal ul.active {
+    display: block; }
+  .portfolio-internal ul li {
+    margin-bottom: 30px;
+    border-bottom: 1px solid darkslategray; }
+    .portfolio-internal ul li:last-child {
+      border: none; }
+    .portfolio-internal ul li .date-info {
+      font-size: 15px; }
+    .portfolio-internal ul li p a {
+      font-weight: bold;
+      text-decoration: none;
+      color: #1A2930; }
+      .portfolio-internal ul li p a:hover {
+        text-decoration: underline; }
+  .portfolio-internal ul .image-container {
+    margin: 20px auto; }
+  .portfolio-internal ul .app-container {
+    display: none; }
+    .portfolio-internal ul .app-container.active {
+      display: flex; }
+    .portfolio-internal ul .app-container#snake {
+      width: 400px;
+      height: 400px;
+      background-color: grey;
+      margin: 20px auto; }
+      .portfolio-internal ul .app-container#snake canvas {
+        display: none; }
+      .portfolio-internal ul .app-container#snake canvas.active {
+        display: block; }
+      .portfolio-internal ul .app-container#snake button {
+        display: none;
+        margin: auto;
+        color: black;
+        background-color: white;
+        border-radius: 5px;
+        width: 100px;
+        height: 40px; }
+      .portfolio-internal ul .app-container#snake button.active {
+        display: block; }
+    .portfolio-internal ul .app-container#calculator-app .calc-btn {
+      background-color: silver;
+      color: black;
+      width: 25px;
+      height: 45px;
+      border: 1px solid grey;
+      text-align: center;
+      cursor: pointer;
+      font-size: 32px;
+      font-weight: 100;
+      padding-top: 3px; }
+    .portfolio-internal ul .app-container#calculator-app .calc-btn:hover {
+      background-color: orange; }
+    .portfolio-internal ul .app-container#calculator-app .row {
+      display: flex;
+      table-layout: fixed;
+      width: 300px; }
+    .portfolio-internal ul .app-container#calculator-app .column {
+      width: 300px; }
+    .portfolio-internal ul .app-container#calculator-app .calc-btn.column.longer {
+      width: 154px; }
+    .portfolio-internal ul .app-container#calculator-app .calc-btn.column:not(.longer) {
+      width: 75px;
+      justify-content: space-around; }
+    .portfolio-internal ul .app-container#calculator-app #calc-display-val {
+      height: 80px;
+      color: white;
+      text-align: right;
+      border-left: 1px solid grey;
+      border-top: 1px solid grey;
+      border-right: 1px solid grey;
+      font-size: 48px;
+      background-color: #383838;
+      overflow: hidden;
+      white-space: nowrap;
+      padding: 12px;
+      border-radius: 7px 7px 0 0; }
+    .portfolio-internal ul .app-container#calculator-app .calc-btn-operator {
+      background-color: orange;
+      color: white; }
+    .portfolio-internal ul .app-container#calculator-app #calc-equals {
+      border-radius: 0 0 7px 0; }
+    .portfolio-internal ul .app-container#calculator-app #calc-zero {
+      border-radius: 0 0 0 7px; }
+    .portfolio-internal ul .app-container#calculator-app #calc-parent {
+      /*width of calculator*/
+      width: 300px;
+      margin: 0 auto;
+      padding: 20px; }
+  .portfolio-internal ul .dropdown-container, .portfolio-internal ul .dropdown-app-container {
+    display: flex;
+    justify-content: space-between;
+    width: 81%;
+    margin: 0 auto;
+    background-color: #42647F;
+    padding: 20px;
+    color: white;
+    cursor: pointer; }
+    .portfolio-internal ul .dropdown-container i, .portfolio-internal ul .dropdown-app-container i {
+      display: none; }
+      .portfolio-internal ul .dropdown-container i.active, .portfolio-internal ul .dropdown-app-container i.active {
+        display: block; }
+  .portfolio-internal ul img {
+    width: 83%;
+    margin: 0 auto;
+    display: none;
+    padding: 10px; }
+    .portfolio-internal ul img.active {
+      display: block; }
 
 .contact-internal .email-container {
   display: flex;

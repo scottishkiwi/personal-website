@@ -1,8 +1,5 @@
 $(document).ready(function(){
-
     init();
-    
-
 });
 
 var init = function(){
@@ -10,7 +7,85 @@ var init = function(){
         typeWriter();
     }
     
-   copyClipBoard();
+    copyClipBoard();
+
+    if($('.portfolio-internal').length){
+        portfolioImageSetup();
+        portfolioAppSetup();
+        portfolioLayoutSetup();
+    }
+    
+}
+
+function portfolioLayoutSetup(){
+
+    $('.title-container').on('click', function(){
+        var portfolioList = $(this).siblings('ul');
+        var iconDown = $(this).find('i.fa-chevron-down');
+        var iconUp = $(this).find('i.fa-chevron-up');
+
+        console.log(portfolioList);
+
+        if (portfolioList.hasClass('active')){
+            portfolioList.removeClass('active');
+            iconDown.addClass('active');
+            iconUp.removeClass('active');
+        }else{
+            portfolioList.addClass('active');
+            iconDown.removeClass('active');
+            iconUp.addClass('active');
+        }
+        
+    });
+}
+
+function portfolioAppSetup(){
+
+    $('.dropdown-app-container').on('click', function(){
+        var app =  $(this).siblings('.app-container');
+        var iconDown = $(this).find('i.fa-chevron-down');
+        var iconUp = $(this).find('i.fa-chevron-up');
+
+        if (app.hasClass('active')){
+            app.removeClass('active');
+            iconDown.addClass('active');
+            iconUp.removeClass('active');
+
+            //reset Snake game
+            playerX = playerY = 10; 
+            velocityX = velocityY = 0; 
+            clearInterval(interval);
+            canvas.classList.remove('active');
+            button.classList.add('active');
+        }else{
+            app.addClass('active');
+            iconDown.removeClass('active');
+            iconUp.addClass('active');
+        }
+        
+    });
+
+}
+
+function portfolioImageSetup(){
+
+    $('.dropdown-container').on('click', function(){
+        var image =  $(this).siblings('img');
+        var iconDown = $(this).find('i.fa-chevron-down');
+        var iconUp = $(this).find('i.fa-chevron-up');
+
+        if (image.hasClass('active')){
+            image.removeClass('active');
+            iconDown.addClass('active');
+            iconUp.removeClass('active');
+        }else{
+            image.addClass('active');
+            iconDown.removeClass('active');
+            iconUp.addClass('active');
+        }
+        
+    });
+
 }
 
 function copyClipBoard(){
