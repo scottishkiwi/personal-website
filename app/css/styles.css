@@ -192,9 +192,10 @@ body {
       color: #CCCBC6;
       padding: 30px 25px;
       font-size: 30px; }
-    body header .header-container a img {
-      padding-top: 30px;
-      width: 150px; }
+    body header .header-container a {
+      align-items: center; }
+      body header .header-container a img {
+        width: 150px; }
     body header .header-container .nav-container nav {
       display: none;
       position: absolute;
