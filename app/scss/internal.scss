@@ -363,6 +363,8 @@
 
         li{
 
+            padding: 10px 15px; 
+
             &:nth-child(2n){
                 background-color: #42647F;
             }
@@ -436,12 +438,26 @@
             iframe{
                 width: calc(100% - 20px);
                 margin: 0;
-                height: 24%;
+                height: 30%;
             }
         }
 
     }
 
    
+
+}
+
+@media only screen and (max-width: 400px) {
+    .about-me-internal{
+        .container{
+
+            iframe{
+              
+                height: 24%;
+            }
+        }
+
+    }
 
 }

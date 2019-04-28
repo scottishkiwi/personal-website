@@ -228,8 +228,10 @@
 @media only screen and (max-width: 1024px) {
   .experience-internal ul {
     grid-template-columns: 1fr 1fr 1fr; }
-    .experience-internal ul li:nth-child(2n) {
-      background-color: #42647F; }
+    .experience-internal ul li {
+      padding: 10px 15px; }
+      .experience-internal ul li:nth-child(2n) {
+        background-color: #42647F; }
   .portfolio-internal ul .dropdown-container, .portfolio-internal ul .dropdown-app-container {
     width: auto; }
   .portfolio-internal ul img {
@@ -258,4 +260,8 @@
   .about-me-internal .container iframe {
     width: calc(100% - 20px);
     margin: 0;
+    height: 30%; } }
+
+@media only screen and (max-width: 400px) {
+  .about-me-internal .container iframe {
     height: 24%; } }
