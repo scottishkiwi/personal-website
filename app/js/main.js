@@ -121,7 +121,7 @@ function copyClipBoard(){
 
 
 var i = 0;
-var txt = "Hi there, I'm Daniel. I live in Wellington, New Zealand. I build high quality websites and web applications using modern technologies.";
+var txt = "Hi there, I'm Daniel. I live in Wellington, New Zealand. I build high quality websites and web applications using modern tools and technologies.";
 var speed = 40;
 
 function typeWriter() {
