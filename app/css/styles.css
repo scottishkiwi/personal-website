@@ -150,11 +150,11 @@ body {
           background-color: #1A2930;
           border-color: #1A2930; }
     body main .about-me {
-      background-color: #909090;
-      color: #121e24; }
+      background-color: #42647F;
+      color: lightgrey; }
       body main .about-me a {
-        border-color: #121e24;
-        color: #121e24; }
+        border-color: lightgrey;
+        color: lightgrey; }
         body main .about-me a:hover {
           color: white;
           background-color: #1A2930;

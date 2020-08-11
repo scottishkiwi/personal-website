@@ -214,12 +214,21 @@
         }
         
         .about-me{
-            background-color: #909090;
-
-            color: rgb(18, 30, 36);
+            background-color: #42647F;
+            color: lightgrey;
+          //  color: rgb(18, 30, 36);
+            // a{
+            //     border-color: rgb(18, 30, 36);;
+            //     color: rgb(18, 30, 36);;
+            //     &:hover{
+            //         color: white;
+            //         background-color: #1A2930;
+            //         border-color: #1A2930;
+            //     }   
+            // }
             a{
-                border-color: rgb(18, 30, 36);;
-                color: rgb(18, 30, 36);;
+                border-color: lightgrey;
+                color: lightgrey;
                 &:hover{
                     color: white;
                     background-color: #1A2930;
